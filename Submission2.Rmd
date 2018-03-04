@@ -1,0 +1,1610 @@
+---
+title: "Comprehensive Exam Answers "
+author: "By Dieudonne Ouedraogo"
+date: "2/1/2018"
+header-includes:
+   - \usepackage{float}
+   - \usepackage{graphicx}
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE,fig.pos='H'}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#PART1 -----DR.HIROKI SAYAMA-------
+
+#S1
+
+###Consumer Behavior Analysis In Modern Environment
+
+###Abstract
+
+Social networks activities are parts of our lives, and we interact with others through those means more often.
+As the number of users grows and technology improve, a new reality is taking place: even though most people identify themselves as unique, they tend to show preferences that could be clustered into groups. We are more willing to share our information on the social network; one may argue that we are becoming more predictable than before.
+We can defined groups or communities by labeling preferences and characteristics as instances where an individual is using perspectives or values as the basis for his or her current behavior. A group could guide the action in some situations.Those groups could be segmented as well.
+
+Within groups either directly or indirectly, studies showed that more experienced members serve as experts and leaders and newer members seek advice and information directly or indirectly as well.We could argue that the collective behavior of the entire network influences any member.
+Regarding investments being made by companies on social media marketing, it is now indisputable that great insights could be extracted from social networks to drive business decisions and gain competitive advantage.
+Recent studies in network science reveal the presence of well-defined structures in social networks; an example is the presence of homophily which shows individuals with similarity tending to connect to each other. This paper examines the structural qualities of Social Networks towards the identification of trends in consumers behavior, it gives insights to the characterization of consumer behavior, particularly in the area of predictive analytics.
+
+
+
+
+
+
+###Keywords:
+
+***Consumer Behavior Analysis, Network Science, Data Mining, Trend Discover, Predictive Analytics, Personalization***
+
+###Literature Review
+
+Twitter has been extensively used on predicting trends in many research because of the relatively small size of its attributes. In a broader sense of social network being used to forecast events, Achrekar et al.[1] used Twitter to predict the trend of the flu virus. They successfully used auto-regression models on tweets to accurately predict the numbers published by the Center for Disease Control (CDC).While the CDC wait to collect actual cases to generate figures, their model could quickly predict outbreak and could be used to save lives.Iyengar et al. were able to predict the start and the end of a set of sports, weather and social activities using SVM classifier and hidden Markov Model on Twitter data.[2]
+Peng et al. investigated re-tweets patterns using conditional random fields.They defined features as the content influence, network influence and temporal decay factor.The results showed that re-tweet predictions could be substantially improved under social relationships compare to a baseline environment[3].
+Gloor, Nann,and Schoder used structural qualities to find betweenness centrality of actors by weighing the context of their positions in the network, they successfully predict long-term trends on the popularity of 
+movies and politicians[4].
+Understanding the underline structure of social networks and their relationship to each other is vital on predicting the behavior of nodes, in that sense, Mislove et al. studied the structure of different online social networks. Their results confirm the presence of power-law, small-world, and scale-free properties of online social networks they observe that the in-degree of user nodes tends to match the out-degree[5].
+Cantonese et al. analyzed the properties of social networking graphs.They examined scaling laws distribution of friendship and centrality measurements [6].
+A useful tool in consumer behavior prediction is "Link Mining". Algorithms using this technique are designed to support performance among some activities including question answering, information retrieval and web-
+based data warehousing [7].
+Erbs et al. proved that training data and data volume improve performance in link discovery with text-based approaches[8].
+Qian et al. used link mining techniques on the Enron mail corpus data and were able to show communities within linked nodes, they were able also to identify 'common friends' using cluster analysis.[9].
+Other methods explored link-predictions with applications for exploring data, distributed environments, and spam analysis. [10][11][12]. Research in Social Networks is also visible on current search technology including Page Rank and HITS [13][14][15]. Using these techniques, Bharat, Henzinger, and Chakraborti presented variations that utilize web page context to weight pages and links based on relevance.[16][17].Sugiyama et al. used the topological structure of a graph to successfully combine few methods including network, quantitative, semantic, data processing, conversion and visualization-based components [18]. Research in Semantic Web technologies also yielded development in Social Networks. In that sense Zhou, Chen, and Yu combined an ontology-based Social Network along with a statistical learning method towards Semantic Web data using an extended FOAF (friend-of-a-friend) ontology applied as a mediation schema to integrate Social Networks and a hybrid entity reconciliation method to resolve entities of different data sources [19]. Thushar and Thilagam used Semantic Web technology for the identification of associations between multiple domains within a Social Network [20].
+Several Relational Learning methods have supported Social Network analysis predicated on the concept of homophily-based associations to support learning. In that context, we have the application of probabilistic modeling [21] collaborative relationship [22] and inference-based approaches [23].
+Visualization techniques are being used, and it substantially helps in studying Social Networks dynamics. Batajelj and Mrvar created tools for the visualization of large-scale networks where it is possible to identify vertices and relations between clusters [24].
+Noel et al. calculated inter-item distances among combinations of elements from which hierarchical clustering dendrograms are visualized to enhance measurement consistency between clusters and frequent item-sets. They introduced an application of association mining to the visualization of link structures. Important frequently occurring higher-order item-sets are often obscured by the poor pairwise treatment of traditional analysis. The approach they take here involves the discovery of frequently occurring item-sets of arbitrary cardinalities, and the assigning 
+of importance to them according to their support frequencies[25].
+Levng et al. created Social Viz which provided users with a means to view frequency relationships among multiple entities in a network [26]. They used frequent pattern mining and visualization techniques. a visualizer called SocialViz is developed for providing users with frequency information on the social relationship among multiple entities in the networks. SocialViz could be used a standalone visualization tool, or as an additional tool to existing visualizers, for social networks exploration[26].
+David Alfred et al. used a collection of twitter message to extract metrics that determine the effect of key players and find a correlation between their graph structure and the market share of three primary mobile Operating System[27].
+Sharad Goel, and Daniel Goldstein used retail data and applied logistic regression and five-fold cross-validation to compute the likelihood of an individual making a purchase based on his contacts past activities.The results show that individuals with contacts who made a purchase before are more likely to purchase than individuals with connections who did not have any previous purchase[28]. Yoon et al. used S&P companies data from 2010-2015 and math them to 24 million user comments directed at those companies' Facebook posts.They tested hypotheses using fixed effect(FE) and random effects(RE) and dynamic (generalized method of moments) and reached to the conclusion that digital engagement volume has significant positive impact on revenue[29]
+John et al. cautioned the translation of "liking" on social media into an indicator of an intent to make a purchase.Through their study they discover based on more than 14000 cases, that more features in addition to the button "Like" are needed to make the accurate prediction on the purchase[30].
+Chong et al. conducted an experimental study on the consumer engagement behavior(CEB) and were able to show using ordinary least square (OLS) regression models that Facebook and YouTube activities positively correlate with box-office revenue, however, their results are not conclusive for twitter.They proposed and tested a set of metrics[31].
+Ding et al. used Pre-released movies "likes" data from Facebook and discovered that more campaign on those Pre-released data increases revenue for a film [32]. Yung et al. propose an experimental model where businesses can target new customers; when a customer visits a store, recommendations are guided using the client social media data. The preliminary results show that companies can generate substantial revenue utilizing this process[33].
+Hyunmi et al. investigated the ewom(electronic word-of-mouth) of different social networks using Roger's innovation diffusion model on collected daily data from movies and the results pertain that Twitter influence on box office revenue is more significant in the initial opening stage[34].
+
+###Limits of the previous approaches.
+
+Most of the work elaborated above even though spread around different techniques do handle Social Network analysis in a static fashion where nodes or actors dynamics are not taken into account. The arrival or departure time of agents are not taking into consideration, but we believe those features can lead to better insights.The geospatial distribution of the contacts is somehow neglected in the studies.Very often our contacts on networks are spread around the globe and depending on the geographical position, reality and culture can create a barrier that is hard to overcome so we believe a segmented approach can be helpful. Most of the work above also are somehow single network an approach, individual may have preferred using different social networks, and we believe an approach that combines multiple networks analysis may be more conclusive. A handicap with most of those research is the limited scope of Social Networks analysis only.Most of the data available in Social Network are unstructured, a hybrid approach where also structured transaction data are used can lead to better predictions.If a new node joins a network, we can make a recommendation based on his contacts preference, but an old node which has transaction data available in retailer database could have a better 
+recommendation based on both analysis.
+
+###Methodology
+We defined a framework where nodes are individuals or users. Unlike previous studies, we consider the time factor when a node enter or exit the network. We define and track metrics that define nodes activities: number of comments or "like" and browsing time on social networks related to time.We define similarity measures as characteristics shared by different nodes, and we cluster nodes based on those similarities. We combine the use of multiple networks datasets. We describe a second set of nodes as products, and we specify characteristics that differentiate products. We study the proprieties of nodes or group of nodes as well as their edges(relationships).Unlike previous studies, we consider two situations on multiple Social Networks, a condition where consumer's past transactional data is available and a situation in the absence of transactional data.
+We propose hybrid models for purchase predictions in either situation. We measure the performance of the models proposed on the actual data.
+
+
+###References
+
+
+[1] Achrekar, H.; Gandhe, A.; Lazarus, R.; Ssu-Hsin Yu; Benyuan Liu; Predicting Flu Trends using Twitter data Computer Communications Workshops (INFOCOM WKSHPS), 2011 IEEE Conference on
+Publication Year: 2011 , Page(s): 702 - 707
+
+[2] Peng, Huan-Kai; Zhu, Jiang; Piao, Dongzhen; Yan, Rong; Zhang, Ying;
+Retweet Modeling Using Conditional Random Fields
+Data Mining Workshops (ICDMW), 2011 IEEE 11th International Conference on
+Publication Year: 2011, pp 336-343
+
+[3] Iyengar, Akshaya; Finin, Tim; Joshi, Anupam; Content-Based Prediction of Temporal Boundaries for Events in Twitter
+Privacy, Security, Risk and Trust (PASSAT), 2011 IEEE Third International Conference on and 2011 IEEE Third International Conference on Social Computing (SocialCom)
+Publication Year: 2011, pp 186-191
+
+[4] Wasserman, Faust, "Social network analysis: methods and applications" (structural analysis in the social sciences), Cambridge University Press, Cambridge.
+
+[5]  Measurement and analysis of online social networks by Alan Mislove, Massimiliano Marcon, Krishna P. Gummadi, Peter Druschel, Bobby Bhattacharjee
+In Proceedings of the 7th ACM SIGCOMM conference on Internet measurement (2007), pp. 29-42,
+
+[6] Cantonese, Salvadore, De Meo, Pasquale, Ferrara, Emilio, Fiumara, Giacomo, Provetti, Alessandro, Crawling Facebook for Social Network Analysis, WIMS'11 May 25-27, 2011 Sogndal Norway
+
+[7] Knowledge Discovery and Retrieval on World Wide Web Using Web Structure Mining
+
+Boddu, Sekhar Babu; Anne, V.P Krishna; Kurra, Rajesekhara Rao; Mishra, Durgesh Kumar; Mathematical/Analytical Modelling and Computer Simulation (AMS), 2010 Fourth Asia International Conference on, 2010, pp: 532-537
+
+
+[8] Erbs, Nicolai, Zesch, Torsten, Gurevych, Iryna, Link Discovery: A Comprehensive Analysis, 2001 Fifth IEEE International Conference on Semantic Computing 
+
+[9] Acar, E.; Dunlavy, D.M.; Kolda, T.G.;
+Link Prediction on Evolving Data Using Matrix and Tensor Factorizations
+Data Mining Workshops, 2009. ICDMW '09. IEEE International Conference on
+2009, pp 262-269
+
+[10]Cai-Rong Yan; Jun-Yi Shen; Qin-Ke Peng; Ding Pan; Parallel Web mining for link prediction in cluster server Machine Learning and Cybernetics, 2005. Proceedings of 2005 International Conference on
+Volume: 4: 2005 , Page(s): 2291 - 2295 Vol. 4
+
+[11] Caverlee, J.; Webb, S.; Ling Liu; Rouse, W.B.;
+A Parameterized Approach to Spam-Resilient Link Analysis of the Web
+Parallel and Distributed Systems, IEEE Transactions on Volume: 20, Issue: 10
+2009, pp 1422-1438
+
+[12] Rong Qian; Wei Zhang; Bingni Yang; Detect community structure from the Enron Email Corpus Based on Link Mining, Intelligent Systems Design, and Applications, 2006. ISDA '06. Sixth International Conference on
+Volume: 2Publication Year: 2006 , Page(s): 850 -855
+
+[13] Web structure mining: an introduction
+da Costa, M.G., Jr.; Zhiguo Gong;
+Information Acquisition, 2005 IEEE International Conference on 2005
+
+[14]L. Page, S. Brin, R. Motwani, T. Winograd, The PageRank citation ranking: Bringing order to the Web., Technical Report, Stanford Univesity, 1998
+
+[15]NMF: Network Mining Framework Using Topological Structure of Complex Networks
+Sugiyama, K.; Ohsaki, H.; Imase, M.; Yagi, T.; Murayama, J.;
+Congress on Services Part II, 2008. SERVICES-2. IEEE Publication Year: 2008, pp 210-211
+
+[16] J. Kleinburg, Authoritative sources in a hyperlinked environment. Journal of the ACM 46(5): 604-632 1999 
+
+[17]K. Bharat , M.R. Henzinger, Improved algorithms for topic distillation in a hyperlinked environment. In ACM SIGIR International Conference on Research and Development in Information Retrieval, pages 104-111, 1998
+
+[18]S. Chakrabarti, B.Dom, and P.Indyk Enhanced hypertext categorization using hyperlinks. In SIGMOD International Conference on Management of Data pp 307- 318, 1998
+
+[19]Semantic Message Link Based Service Set Mining for Service Composition
+Anping Zhao; Xiaoyong Wang; Ke Ren; Yuhui Qiu;
+ 
+
+Semantics, Knowledge and Grid, 2009. SKG 2009. Fifth International Conference on 2009 , Page(s): 338 - 341 
+
+[20]Thushar, A.K.; Thilagam, P.S.; An RDF Approach for Discovering the Relevant Semantic Associations in a Social Network Advanced Computing and Communications, 2008. ADCOM 2008. 16th International Conference on Publication Year: 2008, pp 214- 220
+
+[21] Achim Rettinger Matthias Nickles, Volker Tresp Statistical Relational Learning with Formal Ontologies, ECML PKDD '09 Proceedings of the European Conference on Machine Learning and Knowledge Discovery in Databases: Part II
+
+[22] Kirsten, Mathias, Wrobel, Stefan, Inductive Logic Programming, Lecture Notes in Computer Science, 1998, Volume 1446/1998, 261-270, DOI: 10.1007/BFb0027330 
+
+[23] Chunying Zhou; Huajun Chen; Tong Yu; Learning a Probabilistic Semantic Model from Heterogeneous Social Networks for Relationship Identification Tools with Artificial Intelligence, 2008. ICTAI '08. 20th IEEE International Conference on Volume: 1
+
+[24] Batagelj, Vladimir, Mrvar, Andrej, Pajek: Analysis and visualization of large networks, Graph Drawing Software Book. Junger, P. Mutzel, editors 2003
+
+[25]Noel, S.; Raghavan, V.; Chu, C.-H H.H.;
+Visualizing association mining results through hierarchical clusters, Data Mining, 2001. ICDM 2001, Proceedings IEEE International Conference on
+Publication Year: 2001, pp 425 - 432
+
+
+[26]Leung, Carson Kai-Sang, Carmichael, Christopher L., Exploring Social Networks: A Frequent-Pattern Visualization Approach, IEEE International Conference on Social Computing, 2010
+
+
+[27] David Alfred Ostrowski. "Social Network Analysis for Consumer Behavior Prediction". Accessible at: http://worldcomp-proceedings.com/proc/p2012/ICA3445.pdf
+
+[28]Sharad Goel, Daniel C. Goldstein.
+"Predicting Individual Behavior with Social Networks"
+
+
+
+[29] Attracting Comments: Digital Engagement Metrics on Facebook and Financial Performance
+Gunwoo Yoon, Cong Li, Yi (Grace) Ji, Michael North, Cheng Hong & Jiangmeng Liu
+Pages 1-14 | Received 28 Apr 2017, Accepted 07 Nov 2017, Published online: 24 Jan 2018
+https://doi.org/10.1080/00913367.2017.1405753
+
+
+
+[30]Leslie K. John, Oliver Emrich, Sunil Gupta, and Michael I. Norton (2017) Does "Liking" Lead to Loving? The Impact of Joining a Brand's Social Network on Marketing Outcomes. Journal of Marketing Research: February 2017, Vol. 54, No. 1, pp. 144-155.
+https://doi.org/10.1509/jmr.14.0237
+
+
+[31]Chong Oh, Yaman Roumani, Joseph K. Nwankpa, Han-Fen Hu
+Beyond likes and tweets: Consumer engagement behavior and movie box office in social media
+Information & Management
+Volume 54, Issue 1, January 2017, Pages 25-37
+10.1016/j.im.2016.03.004
+
+
+[32]Chao Ding,Hsing Kenneth Cheng,Yang Duan,YongJin
+The power of the "like" button: The impact of social media on box office
+Decision Support Systems
+Volume 94, February 2017, Pages 77-84
+https://doi.org/10.1016/j.dss.2016.11.002
+
+
+
+[33]Yung-Ming Li, Lien-Fa Lin, Chun-Chih Ho
+A social route recommender mechanism for store shopping support
+Author links open overlay panel
+Decision Support Systems
+Volume 94, February 2017, Pages 97-108
+
+https://doi.org/10.1016/j.dss.2016.11.004
+
+
+
+[34]Hyunmi Baek,Sehwan Oh,Hee-DongYang,JoongHo Ahn
+Electronic word-of-mouth, box office revenue and social media
+Electronic Commerce Research and Applications
+Volume 22, March-April 2017, Pages 13-23
+https://doi.org/10.1016/j.elerap.2017.02.001
+
+
+
+
+
+#S2.
+
+The dataset could be downloaded from here
+
+http://konect.uni-koblenz.de/networks/amazon-ratings
+
+***The dataset represents the ratings given by users on products during a specific period.The data was extracted from the website loaded into TextWrangler and converted into a text file.The data was then loaded into R studio.R programming is used to answer this part.The package igraph is used.To make conclusions and inferences more convincing, codes outputs and reports are embedded together!***
+
+
+***Reading the data into the environment and loading necessary libraries***
+
+
+```{r,warning=FALSE,message=FALSE}
+library(pander)## Printing libraries for display
+library(knitr)## Printing libraries
+library(igraph)## Network science library
+##Load the data
+ratings <- read.table("~/Downloads/amazon-ratings/amazon-ratings1.txt", quote="\"", comment.char="")
+##Name the colomns
+colnames(ratings)<-c("ID_from_Node","ID_to_Node","Edge_Weight","Timestamp")
+###Let's display the first 10 rows
+kable(head(ratings,10),caption="First 10 Rows of the data")
+```
+
+
+
+
+***The data could be saved into a CSV file for easy future work; below is the code***
+
+
+```{r,eval=FALSE}
+write.csv(ratings,file = "Ratings.csv")
+```
+
+***The Edge Weight which represents the values of ratings could be grouped to have a clear idea of the most rated product and the most active user (nodes)***
+
+
+```{r,warning=FALSE,message=FALSE}
+d=ratings$Edge_Weight#Define a variable d which contain all the weights
+td=table(d) #group d by distinctive values and assigned that table to variable
+pander(td,caption="Ratings")
+```
+
+
+***Let's look at the most used rating value and the distribution of the ratings***
+
+
+```{r,warning=FALSE,message=FALSE}
+kable(paste("The most used rating appears",max(td),"times"))
+pie(td,main="Porportion of ratings")
+barplot(td,col="blue",main="frequency of ratings:Edges' weights")
+```
+
+
+
+***Based on the above plot we can see the distribution of the ratings which indicates that it is not relevant to provide 1.5,2.5,3.5 rating choices: most people don't use them.***
+
+***Let's define the most active user(node)***
+
+
+```{r,warning=FALSE,message=FALSE}
+b=ratings$ID_from_Node# define a variable b and assign ID from nodes to it.
+tt=table(b)# group by the same values
+#Get the  most repeat value
+kable(paste("The most active node has",max(tt),"ratings"))
+kable(paste("THE MOST ACTIVE NODE IS:",names(tt[tt==max(tt)])))
+
+```
+
+
+***The node '10662' has more links(ratings) to products than any other node in the network. This is the MOST ACTIVE NODE in network***
+
+***Let explore the distribution of his ratings.The data associated with this node could be saved into a file for future work(investigative work)***
+
+
+```{r,warning=FALSE,message=FALSE}
+newdata <- ratings[ which(ratings$ID_from_Node=='10662'),]
+#write.csv(newdata,"MostActiveNode.csv")
+d=newdata$Edge_Weight#Define a variable d which contain all the weights
+td=table(d) #group d by distinctive values and assigned that table to variable
+pander(td,caption="Ratings of Most Active Node(User)")
+barplot(td,col="red",main="Ratings of Most Active Node")
+```
+
+
+
+
+***Node 10662 is the most active,but it may not be the node that provide the most positive rating!Positive ratings(5) can help drive more sales so more marketing directed to positive raters can be effective.***
+
+
+
+```{r,warning=FALSE,message=FALSE}
+data5= ratings[which(ratings$Edge_Weight=='5'),]#Selecting only 5 ratings 
+data5_From=data5$ID_from_Node#assing a variable
+t=table(data5_From)#Group by value
+#max(t)
+# the node below gave the most number of rating 5 
+#The node is 
+kable(paste("The Most Friendly User is ",names(t[t==max(t)])))
+```
+
+
+
+***"20898" gives the highest ratings than any other node,this could be refer as the most friendly node(user),his input help drive more sales as he makes the average ratings higher,in some environment he is called booster.***
+
+***Now let's look at the product side***
+
+***From the product standpoint, we can find the best-rated product.We are interested in products with '5' stars as a rating, and we want to find the product which gets the highest number of '5'.***
+
+
+
+```{r,warning=FALSE,message=FALSE}
+#Finding ratings equal to 5 and finding to node value
+data5= ratings[which(ratings$Edge_Weight=='5'), ]
+data5_to=data5$ID_to_Node
+t1=table(data5_to)
+kable(paste("Maximum number of 5 received",max(t1)))
+#2050 times a product has 5 ratings
+kable(paste("Product with maximum ratings is ",names(t1[t1==max(t1)]))) #The name of the node
+```
+
+
+
+***Product '1302' has more positive ratings than any other node. The characteristics of this product could be recorded and perceived as a benchmark for future products conception.This product could be label as "Amazon choice" as it is very well perceived and could be used to attract new customers.It could be label as the MOST LIKED PRODUCT in the network.***
+
+***Let explore the distribution of its ratings.The data associated with this node could be saved into a file for future work (investigative work)***
+
+
+```{r,warning=FALSE,message=FALSE}
+newdata2 <- ratings[ which(ratings$ID_to_Node=='1302'),]
+#write.csv(newdata,"HIGHEST RATINGS.csv")
+d=newdata2$Edge_Weight#Define a variable d which contain all the weights
+td=table(d) #group d by distinctive values and assigned that table to variable
+pander(td,caption="Most Liked Product ratings frequency")
+barplot(td,col="green",main="AMAZON'S CHOICE PRODUCT RATINGS")
+```
+
+
+***This plot indicates that few people are not happy with the product, so a closer targeted study with this group could reveal what needs to be improved in the product to make it more attractive to customers.***
+
+***Let's transform the ratings data into a graph entity for further inferences***
+
+
+
+
+```{r,warning=FALSE,message=FALSE}
+net=graph_from_data_frame(ratings,directed=FALSE)
+class(net)#Let's check the type of net to make sure it is a graph
+V(net)# Let's display few Nodes
+#E(net)#Edges
+E(net)# Let's display few Edges
+```
+
+
+
+***Since this a giant graph where large computing power is required we will not be able to extract the characteristics directly on the graph,instead we sample 5000 observations and collect the metrics of the sample and make an inference on the initial graph***
+
+***We set a seed at 100 for reproducible results***
+
+
+```{r,warning=FALSE,message=FALSE}
+set.seed(100)
+index<-sample(1:nrow(ratings),5000)# Here we index the sample items
+Sampleratings=ratings[index, ]
+#write.csv(Sampleratings, file = "NewRatings.csv")# This file could be used in Gephi
+net=graph_from_data_frame(Sampleratings,directed=FALSE)
+kable(paste("Mean Distance is :",round(mean_distance(net, directed=F),6)))
+kable(paste("The graph density is:",round(graph.density(net,loop=FALSE),6)))
+kable(paste("the shortest path is: ",max(shortest.paths(net,mode="all"))))
+#
+kable(paste("The maximum Eccentricity",max(eccentricity(net,mode="all"))))
+deg <- degree(net, mode="all")
+kable(paste("The diameter of this network is",diameter(net)))
+kable(paste("The maximum degree is:",max(deg)))
+kable(paste("The minimum degree is:",min(deg)))
+kable(paste("The Average degree is:",round(mean(deg),4)))
+Degree_Correlation=assortativity_degree(net,directed = F)
+kable(paste("The degree correlation is:",round(Degree_Correlation,4)))# Degree correlation
+```
+
+
+***The mean distance give us an indication of the average number of connections.***
+
+***The Density is very low, indicating a low connection, the number of possible ratings is much higher than the actual ratings.This confirms that the distribution of ratings is skewed.***
+
+***Shortest path, This value is infinity indicating that nodes are very distant in term of the number of edges to take to reach to them.***
+
+***The degree correlation is negative since this value is negative it is an indication that the network is disassortative, meaning it is less likely that higher degree node attaches with higher degree node, it tends to attach to lower degree node!***
+
+***The max,min and average degree;those numbers give us an indication of how many edges (the ratings in our case) are related to the node(user-product)***
+
+###Sample Visualization
+
+***Here we will pick just 100 observations and vizualize a sample of the structure of the network***
+
+
+
+
+
+```{r,warning=FALSE,message=FALSE}
+index<-sample(1:nrow(ratings),100)# Here we index the sample items
+Sampleratings=ratings[index, ]
+net=graph_from_data_frame(Sampleratings,directed=FALSE)
+V(net)$color=ifelse(Sampleratings[V(net),2]==1,"blue","red")
+plot.igraph(net,vertex.size=5,vertex.label=NA,edge.color="black",edge.width=E(net)$weight,vertex.color=V(net)$color)
+```
+
+
+
+
+
+
+
+#PART 2 ---DR. HAROLD LEWIS----
+
+
+#L-1 (Fuzzy Models)
+
+###Mandani-style fuzzy inference system
+
+###INSURANCE PREMIUMS
+
+
+Actuaries at an insurance company decide to price premium from drivers based on the number of years he spent in school and their actual age.Prior internal data had shown somehow a relationship between those two inputs (age and education years) and the risk associated with the policyholder, so premium to be paid each month must reflect the risk associated!
+They believe premium between 200 and 1200 depending on the driver are reasonable to stay competitive and to avoid bankruptcy.
+so the output is
+
+$Y_{p}=\{200,400,600,800,1000,1200\}$;
+
+$Y_{p}$ = Premium
+
+This set could broken down into L ,M,H respectively for low ,medium, and High premium.
+
+The membership functions defining those values are TFN
+
+$L:(-\infty,200,400)$
+
+$M:(200,600,100)$
+
+$H:(600,1000,\infty)$
+
+###Ages
+
+Drivers ages are between 16 and 60+ and defined by AG
+The set could be split into
+
+Y,M,A  respectively for Young,Middle age and Adult.
+
+The membership functions are TFN
+
+$Y:(-\infty,20,28)$
+
+$M:(20,28,36)$
+
+$A:(28,36,\infty)$
+
+###Educations
+
+Education is between 0 and 20+
+The set could be split into L,M,H for Low,Medium and High 
+The membership functions are TFN
+
+$L:(-\infty,8,12)$
+
+$M:(8,12,16)$
+
+$H:(12,16,\infty)$
+
+
+
+***Below I used the library FuzzyNumber from R to plot the membership functions.TFN is a particular case of TFRN with just a repeated value!So to get a TFN, we use TrapezoidalFuzzyNumber function with a repeated sequence.***
+
+
+***AGE***
+
+```{r,warning=FALSE,message=FALSE}
+library(FuzzyNumbers)
+Y <- TrapezoidalFuzzyNumber(-10^20,20,20,28)
+M <- TrapezoidalFuzzyNumber(20,28,28,36) 
+A<-TrapezoidalFuzzyNumber(28,36,36,10^20)
+plot(Y,xlim=c(15,40),main="AGE Y,M,A")
+plot(M, add=TRUE, col=2, lty=2) 
+plot(A, add=TRUE, col=4, lty=4) 
+```
+
+
+
+***EDUCATION***
+
+```{r,warning=FALSE,message=FALSE}
+L <- TrapezoidalFuzzyNumber(-10^20,8,8,12)
+M <- TrapezoidalFuzzyNumber(8,12,12,16) 
+H<-TrapezoidalFuzzyNumber(12,16,16,10^20)
+plot(L,xlim=c(5,20),main="Education L,M,H")
+plot(M, add=TRUE, col=2, lty=2) 
+plot(H, add=TRUE, col=4, lty=4) 
+```
+
+
+
+
+***Premium***
+
+```{r,warning=FALSE,message=FALSE}
+L <- TrapezoidalFuzzyNumber(-10^20,0,200,400)
+M <- TrapezoidalFuzzyNumber(200,600,600,1000) 
+H<-TrapezoidalFuzzyNumber(600,1000,1000,10^20)
+plot(L,xlim=c(0,1200),main="L,M,H")
+plot(M, add=TRUE, col=2, lty=2) 
+plot(H, add=TRUE, col=4, lty=4) 
+```
+
+
+***The actuaries came up with the inferences rules table below for the premium output based on AGE input and EDUCATION input***
+
+<center>
+![Inferences rule table](L1.png)
+</center>
+
+
+***Supposed a new driver comes in with an age of 24 and an eductation level of  Associate degree (14 years)!***
+
+***The premium is computed as below***
+
+
+***A driver :age 24 and education of Associate degree,AG=24, ED= 14***
+
+###Step 1 
+
+***If we plot the graphs of memberships and draw perpendicular and horizontal lines, we get AG'=0.5/Y +0.5/M as a fuzzy representation of 24 ED'=0.5/M +0.5 /H as fuzzy representation of 14***
+
+###step2 
+
+***Since  we will use only Y and M from age and M and H from EducationThe inference table above is simplified into M,M M and L for Yp.Using the max and min rules of defuzzification we get the intermediate value of***
+
+$Y_{p}'$  as
+
+$$Y_{p}'=0.5/M +0.5/L$$
+
+###Step3
+
+***We are interested in transforming the fuzzy term above into  fuzzy numerical term ;To achieve that we draw 2 horizontal lines splitting M and L by 0.5. We draw vertical lines from each value of premiums (200,400,....1200) and we write all coefficient encounter***
+
+**we get :***
+
+$Yp'=0/200+ 0.5/400+0.5/600+0.5/800+0.5/1000+0.5/1200$
+
+
+###Step4 
+
+***COG***
+
+```{r,warning=FALSE,message=FALSE}
+library(knitr)
+
+Yp= round((0.5*400+0.5*600+0.5*800+0.5*1000+0.5*1200)/(0.5+0.5+0.5+0.5+0.5))
+Premium=Yp
+kable(paste("premium to be paid $",Premium))
+```
+
+
+
+***An adult with education of 20 years and AGE of  40***
+
+###Step1
+
+***If we plot the graphs of memberships and draw perpendicular and horizontal lines, we get***
+
+$AG'=1/A$ ***as a fuzzy representation of 40***
+
+$ED'=1/H$ ***as fuzzy representation of 20***
+
+
+###Step2 
+
+***Since  we will use only A from age and H from Education.The inference table above is simplified into L for Yp.Using the max-min rules of defuzzification we get the intermediate value of***
+
+$Y_{p}'$ ***below***
+
+$$Y_{p}'=1/L$$
+
+
+###Step3
+
+***We are interested in transforming the fuzzy terms above into  fuzzy numerical term .To achieve that we draw 2 horizontal lines splitting  L by 1 We draw vertical lines from each value of premiums (200,400,....1200) and we write all coefficient encounter***
+
+***we get :***
+
+$Y_{p}'=1/200+ 0.0/400+0.0/600+0.0/800+0.0/1000+0.0/1200$
+
+###Step4 
+
+***COG(Center of gravity rule)***
+
+```{r,warning=FALSE,message=FALSE}
+Yp= round((1*200+0.0*400+0.0*600+0.0*800+0.0*1000+0.0*1200)/(1))
+Premium=Yp
+kable(paste("Premium to be paid is $",Premium))
+```
+
+
+###b) Singleton method
+
+###PURCHASE MADE ONLINE IN RELATION TO BROWSING TIME.
+
+
+An online company after contacting a third party is able to determine the annual income of its customers.They place also some tools that collect the time spent by users on their platform The analytic department believe their is a relationship between time spent on the platform ,the income of the customer and the purchase made!So the system as BT and IN as inputs respectively as Browsing time and Income and PU as Purchase output
+For simplification all variables are split into S,M,L as small,medium and large
+
+
+
+Browsing time is $BT:\{S,M,L\}$ 
+
+with values :$\{20,30,40,50,60,...\}$
+
+a TFN is used here with
+
+$S:(-\infty,20,30)$
+
+$M:(20,40,60)$
+
+$L:(40,60,\infty)$
+
+***Membership function of Browsong time BT***
+
+
+
+```{r,warning=FALSE,message=FALSE}
+S <- TrapezoidalFuzzyNumber(-10^20,20,20,30)
+M <- TrapezoidalFuzzyNumber(20,40,40,60) 
+L<-TrapezoidalFuzzyNumber(40,60,60,10^20)
+plot(S,xlim=c(10,70),main="Browsing Time:S,M,L")
+plot(M, add=TRUE, col=2, lty=2) 
+plot(L, add=TRUE, col=4, lty=4) 
+```
+
+***Membership function of Income***
+
+```{r,warning=FALSE,message=FALSE}
+S <- TrapezoidalFuzzyNumber(-10^20,40,40,60)
+M <- TrapezoidalFuzzyNumber(40,80,80,120) 
+L<-TrapezoidalFuzzyNumber(80,120,120,10^20)
+plot(S,xlim=c(30,140),main="Income in thousands S,M,L")
+plot(M, add=TRUE, col=2, lty=2) 
+plot(L, add=TRUE, col=4, lty=4) 
+```
+
+
+
+Income is IN :$\{S,M,L\}$
+
+with values :$\{40,60,80,100,120,...\}$ in thousands
+
+a TFN is used here with
+
+$S:(-\infty,40,60)$
+
+$M:(40,80,120)$
+
+$L:(80,120,\infty)$
+
+
+***Purchases rules are summarized in the table below by the Analytics team.The team believe based on past data that purchase values with Income and browsing time are below***
+
+
+
+
+
+<center>
+![Inference rules table](L2.png)
+</center>
+
+
+
+
+***For a customer who spends 50 minutes on the site and with income of 80 thousand, we predict the purchase below:***
+
+
+
+###Step 1
+
+$BT=50$
+
+$IN=80$
+
+
+***By drawing vertical and horizontal lines through the values of BT and IN***
+
+***we get*** 
+
+$BT'=0.5/M+0.5/L$
+
+$IN'= 1/M$
+
+###Step 2 
+
+***after simplification and using the max-min rules we get:***
+
+$PU'=0.5/300+0.5/600$
+
+###Step 4
+
+***COG***
+
+$PU= round((0.5*300+0.5*600)/0.5+0.5)$
+
+
+```{r,message=FALSE,warning=FALSE}
+
+PU= round((0.5*300+0.5*600)/(0.5+0.5))
+Purchase=PU
+
+kable(paste("Predicted Purchase is $",Purchase))
+
+```
+
+
+***For a customer who spend 70 minute with an income of 150 thousands below are the calculations***
+
+
+***Intuitively one can see  from the rules'table that 70 falls into L for browsing time  and 150 falls into L for INCOME,so the intersection of L and L gives 1000 for the purchase to be madePU=1000***
+
+***But let's take the regular route below***
+
+###Step 1
+
+***drawing horizontal and vertical lines give us the values below***
+
+$BT'=1/L$
+
+$IN'=1/L$
+
+###Step2
+
+***after crossing out unrelated values we get***
+
+$PU"=1/1000$
+
+
+###Step 4
+
+$$PU= round((1*1000)/1)$$
+
+
+```{r,warning=FALSE,message=FALSE}
+
+PU= round((1*1000)/(1))
+Purchase=PU
+kable(paste("Purchase will be $ ",Purchase))
+```
+
+
+###c)TSK
+
+###SALES OF PRODUCT BASED ON RATINGS AND BRAND REPUTATION
+
+An online market provider(Amazon for example) is trying to predict the purchase of a categorized product (Suits for example) based on each product ratings, and the brand reputation ratings are between 1 and 5, and brand reputation is between 1 and 5.
+But somehow ratings are defined by
+
+
+
+$x_{1}:\{S,M,L\}$
+
+Brand reputation by
+
+$x_{2}:\{S,L\}$
+
+<center>
+![Membership function](L5.png)
+</center>
+
+
+***After training,the system parameters are in the tables below***
+
+<center>
+![Coefficients Table](L3.png)
+</center>
+
+
+
+
+<center>
+![Parameters Table](L4.png)
+</center>
+
+***Inputs outputs are related as the schema below***
+
+<center>
+![](L6.png)
+</center>
+
+
+***ANFIS NETWORK LAYERS BELOW***
+
+<center>
+![ANFIS NEWORK LAYERS](L7.png)
+</center>
+
+
+<center>
+![](L8.png)
+</center>
+
+
+
+<center>
+![](L9.png)
+</center>
+
+<center>
+![](L10.png)
+</center>
+
+
+***Applying the above into our case we have***
+
+###Example 1
+
+***for a product with rating of 3(x1=3) and well know brand (x2=5)  the number of items sold y could be computed as below***
+
+###x1=3
+
+###x2=5
+
+###what is y
+
+###a0[1]=3
+
+###a0[2]=5
+
+```{r,warning=FALSE,message=FALSE}
+library(knitr)
+a0_1=3
+a0_2=5
+a1_11=1/(1+abs((a0_1-5)/10)^(2*1))
+#
+kable(paste("a1[1,1]=",round(a1_11,4)))
+a1_12=1/(1+abs((a0_1-15)/10)^(2*0.5))
+#a1_12
+kable(paste("a1[1,2]=",round(a1_12,4)))
+a1_13=1/(1+abs((a0_1-20)/8)^(2*1))
+#a1_13
+kable(paste("a1[1,3]=",round(a1_13,4)))
+#So 
+kable(paste("X1'=",round(a1_11,4),"/S1+",round(a1_12,4),"/M1+",round(a1_13,4),"/L1"))
+#
+a1_21=1/(1+abs((a0_2-5)/10)^(2*1.5))
+#a1_21
+kable(paste("a1[2,1]=",round(a1_21,4)))
+a1_22=1/(1+abs((a0_2-18)/11)^(2*1))
+#a1_22
+kable(paste("a1[2,2]=",round(a1_22,4)))
+#So
+#X2'
+kable(paste("X2'=",round(a1_21,4),"/S2+",round(a1_22,4),"/L2"))
+
+a2_1=a1_11*a1_21
+a2_1
+kable(paste("a2[1]=",round(a2_1,4)))
+a2_2=a1_11*a1_22
+a2_2
+kable(paste("a2[2]=",round(a2_2,4)))
+a2_3=a1_12*a1_21
+a2_3
+kable(paste("a2[3]=",round(a2_3,4)))
+a2_4=a1_12*a1_22
+#a2_4
+kable(paste("a2[4]=",round(a2_4,4)))
+a2_5=a1_13*a1_21
+#a2_5
+kable(paste("a2[5]=",round(a2_5,4)))
+a2_6=a1_13*a1_22
+#a2_6
+kable(paste("a2[6]=",round(a2_6,4)))
+a3=a2_1+a2_2+a2_3+a2_4+a2_5+a2_6
+#a3
+kable(paste("a3=",round(a3,4)))
+a4_1=a2_1/a3
+a4_1
+kable(paste("a4[1]=",round(a4_1,4)))
+a4_2=a2_2/a3
+kable(paste("a4[2]=",round(a4_2,4)))
+#a4_2
+a4_3=a2_3/a3
+#a4_3
+kable(paste("a4[3]=",round(a4_3,4)))
+a4_4=a2_4/a3
+#a4_4
+kable(paste("a4[4]=",round(a4_4,4)))
+a4_5=a2_5/a3
+#a4_5
+kable(paste("a4[5]=",round(a4_5,4)))
+a4_6=a2_6/a3
+
+
+#a4_6
+kable(paste("a4[6]=",round(a4_6,4)))
+
+
+#Layer 5
+
+a5_1=a4_1*(5+0.50*a0_1+0.6*a0_2)
+#a5_1
+kable(paste("a5[1]=",round(a5_1,4)))
+a5_2=a4_2*(6+0.40*a0_1+1.0*a0_2)
+#a5_2
+kable(paste("a5[2]=",round(a5_2,4)))
+a5_3=a4_3*(2+0.50*a0_1+0.3*a0_2)
+#a5_3
+kable(paste("a5[3]=",round(a5_3,4)))
+a5_4=a4_4*(10-0.10*a0_1+0.8*a0_2)
+#a5_4
+kable(paste("a5[4]=",round(a5_4,4)))
+a5_5=a4_5*(-3+0.8*a0_1+0.3*a0_2)
+#a5_5
+kable(paste("a5[5]=",round(a5_5,4)))
+
+a5_6=a4_6*(8-0.50*a0_1+1.00*a0_2)
+#a5_6
+kable(paste("a5[6]=",round(a5_6,4)))
+#Layer 6
+y=a5_1+a5_2+a5_3+a5_4+a5_5+a5_6
+#y
+kable(paste("Y,The number of items sold is =",round(y)))
+```
+
+
+
+
+
+###Example 2
+
+***For an excellent rating Suit(5)  and a reputable brand , we have the calculations below***
+
+###x1=5
+###x2=5
+###what is y
+###a0[1]=5
+###a0[2]=5
+
+```{r,warning=FALSE,message=FALSE}
+library(knitr)
+a0_1=5
+a0_2=5
+a1_11=1/(1+abs((a0_1-5)/10)^(2*1))
+#
+kable(paste("a1[1,1]=",round(a1_11,4)))
+a1_12=1/(1+abs((a0_1-15)/10)^(2*0.5))
+#a1_12
+kable(paste("a1[1,2]=",round(a1_12,4)))
+a1_13=1/(1+abs((a0_1-20)/8)^(2*1))
+#a1_13
+kable(paste("a1[1,3]=",round(a1_13,4)))
+#So 
+kable(paste("X1'=",round(a1_11,4),"/S1+",round(a1_12,4),"/M1+",round(a1_13,4),"/L1"))
+#
+a1_21=1/(1+abs((a0_2-5)/10)^(2*1.5))
+#a1_21
+kable(paste("a1[2,1]=",round(a1_21,4)))
+a1_22=1/(1+abs((a0_2-18)/11)^(2*1))
+#a1_22
+kable(paste("a1[2,2]=",round(a1_22,4)))
+#So
+#X2'
+kable(paste("X2'=",round(a1_21,4),"/S2+",round(a1_22,4),"/L2"))
+
+a2_1=a1_11*a1_21
+a2_1
+kable(paste("a2[1]=",round(a2_1,4)))
+a2_2=a1_11*a1_22
+a2_2
+kable(paste("a2[2]=",round(a2_2,4)))
+a2_3=a1_12*a1_21
+a2_3
+kable(paste("a2[3]=",round(a2_3,4)))
+a2_4=a1_12*a1_22
+#a2_4
+kable(paste("a2[4]=",round(a2_4,4)))
+a2_5=a1_13*a1_21
+#a2_5
+kable(paste("a2[5]=",round(a2_5,4)))
+a2_6=a1_13*a1_22
+#a2_6
+kable(paste("a2[6]=",round(a2_6,4)))
+a3=a2_1+a2_2+a2_3+a2_4+a2_5+a2_6
+#a3
+kable(paste("a3=",round(a3,4)))
+a4_1=a2_1/a3
+a4_1
+kable(paste("a4[1]=",round(a4_1,4)))
+a4_2=a2_2/a3
+kable(paste("a4[2]=",round(a4_2,4)))
+#a4_2
+a4_3=a2_3/a3
+#a4_3
+kable(paste("a4[3]=",round(a4_3,4)))
+a4_4=a2_4/a3
+#a4_4
+kable(paste("a4[4]=",round(a4_4,4)))
+a4_5=a2_5/a3
+#a4_5
+kable(paste("a4[5]=",round(a4_5,4)))
+a4_6=a2_6/a3
+
+
+#a4_6
+kable(paste("a4[6]=",round(a4_6,4)))
+
+
+#Layer 5
+
+a5_1=a4_1*(5+0.50*a0_1+0.6*a0_2)
+#a5_1
+kable(paste("a5[1]=",round(a5_1,4)))
+a5_2=a4_2*(6+0.40*a0_1+1.0*a0_2)
+#a5_2
+kable(paste("a5[2]=",round(a5_2,4)))
+a5_3=a4_3*(2+0.50*a0_1+0.3*a0_2)
+#a5_3
+kable(paste("a5[3]=",round(a5_3,4)))
+a5_4=a4_4*(10-0.10*a0_1+0.8*a0_2)
+#a5_4
+kable(paste("a5[4]=",round(a5_4,4)))
+a5_5=a4_5*(-3+0.8*a0_1+0.3*a0_2)
+#a5_5
+kable(paste("a5[5]=",round(a5_5,4)))
+
+a5_6=a4_6*(8-0.50*a0_1+1.00*a0_2)
+#a5_6
+kable(paste("a5[6]=",round(a5_6,4)))
+#Layer 6
+y=a5_1+a5_2+a5_3+a5_4+a5_5+a5_6
+#y
+kable(paste("Y,The number of items sold is =",round(y)))
+
+```
+
+
+
+###d)
+
+***Sometimes the system we are study has variables with characteristics that somehow are related quadratically,a Takagi-Sugeno Fuzzy model whose consequences include second order terms could be used to approximate the non-linear behavior present in that system!***
+
+
+###e)
+
+***The examples I gave above represent my current research interests.This endenscore how important the approaches taken here could serve me as great tools for developping algorithms and tools for predictions. All the above fuzzy models are useful and applicable in my research.***
+
+
+
+
+#L-2 
+
+
+
+###a)
+
+
+
+***When facing a random process or situation, there are many ways to model it using probability repartitions (probability distributions).The probability distribution that gives no assumptions outside of the prior knowledge of the situation returns the maximum entropy.The most ignorant repartition of the probabilities beyond previous data reflecting the case provides the maximum entropy, in other words, the distribution that makes the least claim of knowledge about the situation.***
+
+
+
+
+###b)
+
+***Constraints on mass***
+
+<center>
+![Constraints on masses](L11.png)
+</center>
+
+
+
+***The entropy is defined as***
+
+$$H(p)=-\sum_{i} p_{i} log (p_{i})$$
+
+Subject to $p_{i}\geq0$
+
+$\sum_{i}(p_{i})=1$
+
+$\sum_{i}p_{i}r_{ij}=\alpha_{j}$ for $1\leq j\leq m$
+
+
+
+From Lagrangian
+
+$$J(p)=-\sum_{i} p_{i} log (p_{i})+\lambda_{0}(\sum_{i} p_{i}-1)+\sum_{j} \lambda_{j}(\sum_{i} p_{i}r_{ij}-\alpha_{j})$$
+
+
+I take the derivative with respect to p_{i}:
+
+$$-1-logp_{i}+ \lambda_{0}+\sum_{j=1}\lambda_{j}r_{ij}$$
+I set this to zero and the solution is maximum entropy distribution is 
+$$p_{i}*=\frac{ e^{\sum_{j=1}\lambda_{j}r_{ij}}}{e^{1-\lambda_{0}}}$$
+
+$\lambda_{0},\lambda_{1}...$such that $\sum_{i}p_{i}=1$ and 
+
+$\sum_{i}p_{i}*r_{ij}=\alpha_{j}$
+
+In our case here
+
+I define
+
+$p_{i}=m_{i}/2500$ being the proportion of mass present in the i section.
+
+So $\sum_{i}p_{i}$=1
+
+To get $r_{ij}$, I use the constraints given
+
+$p_{1}+p_{2}+p_{3}=800/2500$
+
+$p_{4}+p_{5}+p_{6}=1200/2500$
+
+$p_{7}+p_{8}+p_{9}=500/2500$
+
+$p_{1}+p_{4}+p_{7}=1000/2500$
+
+$p_{2}+p_{5}+p_{8}=800/2500$
+
+
+
+***The above equations didn't yield any clear solution.So I decide to use trial and error method to solve the problem.I tried to make the least assumption as possible so the entropy could be maximum***
+***The way the problem is formulated with constraints if we are to assign masses to each block and we start with we can decide the value of m1 and m2 to meet the constraint we cannot decide of the value of m3, also m4 and m5 could be randomly chosen but other values can't.Taking the constraints into consideration, we end up with the equations***
+
+
+
+
+$m_{3}=800-m_{1}-m_{2}$
+
+$m_{6}=1200-m_{4}-m_{5}$
+
+$m_{7}=1000-m_{1}-m_{4}$
+
+$m_{8}=800-m_{2}-m_{5}$
+
+$m_{9}=700-m_{6}-m_{3}$
+
+
+***So I designed a way to start with m1,m2 then m4 m5, and I computed the entropy of the system at each step incremental or decremental I sometimes go by step of 10,20 or 1 depending on the value of the entropy returned.I reiterate the process until I get a maximum entropy of:***
+
+
+
+
+$$3.066906$$ 
+***Then I recorded all the values of the masses***
+
+$m_{1}=329$
+
+$m_{2}=258$
+
+$m_{3}=213$
+
+$m_{4}=465$
+
+$m_{5}= 381$
+
+$m_{6}= 354$
+
+$m_{7}=206$
+
+$m_{8}=161$
+
+$m_{9}=133$
+
+
+
+```{r,warning=FALSE,message=FALSE}
+library(knitr)
+library(pander)
+    #m1=((800)/3+(1000/3))/2 I used this initial starting value
+m1=329### 329 Good entropy!! "3.066906" 
+    #m2=((800)/3+(800/3))/2 I used this initial value
+m2= 258# 258The best
+m3=(800-m1-m2)
+m4=465### 465# Very great Good!!
+    #m5=(1200-m4)/2
+m5=381#### 381 the best value
+m6=(1200-m4-m5)
+m7=1000-m1-m4
+m8=800-m2-m5
+m9=700-m6-m3
+mass=c(m1,m2,m3,m4,m5,m6,m7,m8,m9)
+#mass
+mt=matrix(c(m1,m2,m3,m4,m5,m6,m7,m8,m9),byrow=TRUE,nrow=3)
+kable(mt,caption="Estimated Masses")
+pi=mass/2500
+pander(caption="Porportion of Masses",pi)
+H=-sum(pi*log2(pi))
+kable(paste("THE ENTROPY IS:",round(H,5)))
+```
+
+
+
+
+
+
+***According to Klir there are many ways of measuring uncertainty and using maximum entropy is a special case.The Generalized information measure is the sum of Generalized Hartley Measure + the Generalized Shannon measure.***
+
+***While in the Shannon classical measure we assume that probabilities are adding up to 1,we can define another measure where probabilities are not adding up to 1.If we take a lower bound probability for all elements in the set as baseline ,the sum of those probabilities will be less than 1.If we take the maximum probability and we assigned it to all elements we get a total probability greater than 1.In those case we are talking about unprecised probabilities***
+
+***In our particular case let's assume that each block cannot be greater than 450 and cannot be less than 150.So the search space is reduce so the maximum entropy but we do meet the conceptual information we want to maximize which is to get values in certain domain***
+
+###The updated values are
+
+
+
+
+
+```{r,warning=FALSE,message=FALSE}
+m1=390### 
+m2= 258# 
+
+m3=(800-m1-m2)
+
+m4=450###
+m5=381#### 
+m6=(1200-m4-m5)
+m7=1000-m1-m4
+m8=800-m2-m5
+m9=700-m6-m3
+mass=c(m1,m2,m3,m4,m5,m6,m7,m8,m9)
+kable(paste("Minimum mass in this case:",min(mass)))
+kable(paste("Maximum mass in this case:",max(mass)))
+#max(mass)
+kable(paste("Total mass:",sum(mass)))
+mt=matrix(c(m1,m2,m3,m4,m5,m6,m7,m8,m9),byrow=TRUE,nrow=3)
+kable(mt,caption="Estimated New Masses in this case")
+#sum(mass)
+pi=mass/2500
+#kable(caption="Probabilities",pi)
+pander(caption="Porportion of Masses",pi)
+H=-sum(pi*log2(pi))
+kable(paste("THE ENTROPY in this case is",round(H,5)))
+```
+
+
+
+###Conclusion. 
+
+***Uncertainty could be measured by different means, Depending on the function used to do the measure (maximum entropy or Hartley measure) the final results could be different, we can satisfy one requirement and come to a conclusion while using another type of uncertainty measure the results will be express differently***
+
+
+
+#L-3
+
+
+###a)
+
+
+###Hybrid Fuzzy logic and Expert systems used for prostate cancer diagnostic
+
+***In artificial intelligence, an expert system is a computer system that emulates the decision-making ability of a human expert. Expert systems are designed to solve complex problems by reasoning through bodies of knowledge, represented mainly as if-then rules rather than through conventional procedural code An expert system is divided into two subsystems: the inference engine and the knowledge base. The knowledge base represents facts and rules. The inference engine applies the rules to the known facts to deduce new facts. Inference engines can also include an explanation and debugging abilities.(Wikipedia) If we build the inference rules part based on fuzzy logic, we have a hybrid system. Medical diagnostics deal with uncertainty, but expert knowledge is crucial, so it is fair to say that we could use a fuzzy expert system which could capture the uncertainty in the outcome better. In this particular example, we will design a fuzzy expert system tool for predicting prostate cancer. we select a pool of individuals with characteristics. Each has four defined parameters those parameters will be the inputs in our system. They are prostate volume, echotexture, total acid phosphate, prostate fraction of acid phosphate).The output which is the predictable outcome is Prostate cancer Risk(PCR), and it is determined using fuzzy expert systems. We use fuzzy logic inferences as done in L1 but this time the rules are guided by an expert doctor. We use this system to write an interactive application or program( previous experts system were written in Prolog), but in our case here I will write a short python code that can be perceived as Fuzzy Expert systems. To limit the length of this report, I will use few samples rules, and I will bypass the Fuzzification and defuzzification parts which are similar to the approach done on part L1***
+
+
+
+
+
+
+
+***The Structure is below***
+
+<center>
+![structure](structure.png)
+</center>
+
+
+***There are many rules in the inference rule table, all done by expert doctor guidance, but for a more straightforward, description below is just a few extracted lines of those rules.***
+
+***SAMPLE OF RULE GIVEN BY THE DOCTOR***
+
+###If (ET is N) and (PAP is L) and (TAP is L) and (PV is L) then (PCR is VL)
+
+
+###if (ET is N) and (PAP is VL) and (TAP is VL) and (PV is VL) then (PCR is N)
+
+
+###if (ET is N) and (PAP is VH) and (TAP is VH) and (PV is VH) then (PCR is VH)
+
+
+
+###let's supposed that we got as inputs 
+
+$ET=0.479$
+
+$PAP=1.51$
+
+$TAP=2.44$
+
+$PV=90.2$
+
+***Through fuzzification defuzzification and center of gravity rules we get PCR=0.888**
+
+***We want the program to be able able to take those 4 inputs and return the PCR.Below is an implementation using python***
+
+
+***The rules***
+
+<center>
+![rules](rules.png)
+</center>
+
+
+
+***This program is just an illustration.Implementing the actual system require all the rules and a function that compute the PCR based on the four inputs using Mandani's style rules of fuzzification and defuzzification.Variables' borders need to be reframed to include the fuzziness of the situation***
+
+###Sample Implementation of fuzzy expert systems using python, the program is interactive,codes and outputs are below
+
+```{python,eval=FALSE}
+def main ():
+    ET_num=eval(input('Enter the value of ET\n'))
+    if 0 <ET_num <0.1:
+        ET='N'
+    elif 0.1<ET_num<0.3:
+        ET='L'
+    else:
+        ET='H'
+        
+    PAP_num=eval(input('Enter the value of PAP\n'))
+    if 1 <PAP_num <1.2:
+        PAP='VL'
+    elif 1.2<PAP_num<1.5:
+        PAP='L'
+    else:
+        PAP=PAP_num
+        #Suppose  for simplicity that after using the center of gravity rule
+        #we get PCR somehow related to PAP by PCR=PAP/1.7
+        PCR=PAP/1.7
+        PAP='H'
+    TAP_num=eval(input('Enter the value of TAP\n '))
+    if  1.2<TAP_num <1.5:
+        TAP='VL'
+    elif 1.5<TAP_num<2.1:
+        TAP='L'
+    else:
+        TAP='H' 
+        
+    PV_num=eval(input('Enter the value of PV\n'))
+    if 25 <PV_num <50:
+        PV='VL'
+    elif 50<PV_num<75:
+        PV='L'
+    else:
+        PV='H'  
+     
+    
+    if ET=='N' and PAP=='L'and TAP=='L' and PV=='L':
+        print('The PCR is VL:\n') 
+    elif ET=='N' and PAP=='VL'and TAP=='VL' and PV=='VL':
+        print('The PCR is VL:\n')
+    else:
+        print('The PCR is:',PCR)
+        print('The PCR is  Very High:\n')
+        
+if __name__ == '__main__': main()
+
+```
+
+#OUTPUT
+
+
+###runfile('/Users/dieudonneouedraogo/ExpertDoctor.py', wdir='/Users/dieudonneouedraogo')
+
+###Enter the value of ET
+###0.479
+
+###Enter the value of PAP
+###1.51
+
+###Enter the value of TAP
+###2.44
+
+###Enter the value of PV
+###90.2
+###The PCR is: 0.8882352941176471
+###The PCR is  Very High:
+
+###b)
+
+***Human expertise is essential in many domains as it provides nuances that computers can't offer.When the skills and knowledge of humans are coupled with the power of programming, great applications can be developed.Those fuzzy expert systems could serve as excellent assistants everywhere.A computer app that mimics an expert could be a practical tool and help reduce time and error.For example, an expert system doctor could help provide recommendations to people who don't have access to a real doctor by saving time and avoiding mistake from unexperienced health worker Designing such expert systems could be very cost-effective in the long term, and it can make services more accessible to millions.With my current research interest, this hybrid approach can help me build tools in business, risk management or healthcare by implementing the knowledge in building apps.***
+
+
+###References
+
+[1] DR.LEWIS'S COURSE MATERIAL SSIE-519
+
+[2]Ismail SARITAS, Novruz ALLAHVERDI and Ibrahim Unal SERT
+A Fuzzy Expert System Design for Diagnosis of Prostate Cancer
+
+[3]Wikipidea
+
+
+
+#PART3 ----DR.DAEHAN WON------
+
+
+```{r child="WonClean.Rmd"}
+```
+
+
+###Consumer Behavior Analysis In Modern Environment
+
+###Abstract
+
+Social networks activities are parts of our lives, and we interact with others through those means more often.
+As the number of users grows and technology improve, a new reality is taking place: even though most people identify themselves as unique, they tend to show preferences that could be clustered into groups. We are more willing to share our information on the social network; one may argue that we are becoming more predictable than before.
+We can defined groups or communities by labeling preferences and characteristics as instances where an individual is using perspectives or values as the basis for his or her current behavior. A group could guide the action in some situations.Those groups could be segmented as well.
+
+Within groups either directly or indirectly, studies showed that more experienced members serve as experts and leaders and newer members seek advice and information directly or indirectly as well.We could argue that the collective behavior of the entire network influences any member.
+Regarding investments being made by companies on social media marketing, it is now indisputable that great insights could be extracted from social networks to drive business decisions and gain competitive advantage.
+Recent studies in network science reveal the presence of well-defined structures in social networks; an example is the presence of homophily which shows individuals with similarity tending to connect to each other. This paper examines the structural qualities of Social Networks towards the identification of trends in consumers behavior, it gives insights to the characterization of consumer behavior, particularly in the area of predictive analytics.
+
+
+
+
+
+
+###Keywords:
+
+***Consumer Behavior Analysis, Network Science, Data Mining, Trend Discover, Predictive Analytics, Personalization***
+
+###Literature Review
+
+Twitter has been extensively used on predicting trends in many research because of the relatively small size of its attributes. In a broader sense of social network being used to forecast events, Achrekar et al.[1] used Twitter to predict the trend of the flu virus. They successfully used auto-regression models on tweets to accurately predict the numbers published by the Center for Disease Control (CDC).While the CDC wait to collect actual cases to generate figures, their model could quickly predict outbreak and could be used to save lives.Iyengar et al. were able to predict the start and the end of a set of sports, weather and social activities using SVM classifier and hidden Markov Model on Twitter data.[2]
+Peng et al. investigated re-tweets patterns using conditional random fields.They defined features as the content influence, network influence and temporal decay factor.The results showed that re-tweet predictions could be substantially improved under social relationships compare to a baseline environment[3].
+Gloor, Nann,and Schoder used structural qualities to find betweenness centrality of actors by weighing the context of their positions in the network, they successfully predict long-term trends on the popularity of 
+movies and politicians[4].
+Understanding the underline structure of social networks and their relationship to each other is vital on predicting the behavior of nodes, in that sense, Mislove et al. studied the structure of different online social networks. Their results confirm the presence of power-law, small-world, and scale-free properties of online social networks they observe that the in-degree of user nodes tends to match the out-degree[5].
+Cantonese et al. analyzed the properties of social networking graphs.They examined scaling laws distribution of friendship and centrality measurements [6].
+A useful tool in consumer behavior prediction is "Link Mining". Algorithms using this technique are designed to support performance among some activities including question answering, information retrieval and web-
+based data warehousing [7].
+Erbs et al. proved that training data and data volume improve performance in link discovery with text-based approaches[8].
+Qian et al. used link mining techniques on the Enron mail corpus data and were able to show communities within linked nodes, they were able also to identify 'common friends' using cluster analysis.[9].
+Other methods explored link-predictions with applications for exploring data, distributed environments, and spam analysis. [10][11][12]. Research in Social Networks is also visible on current search technology including Page Rank and HITS [13][14][15]. Using these techniques, Bharat, Henzinger, and Chakraborti presented variations that utilize web page context to weight pages and links based on relevance.[16][17].Sugiyama et al. used the topological structure of a graph to successfully combine few methods including network, quantitative, semantic, data processing, conversion and visualization-based components [18]. Research in Semantic Web technologies also yielded development in Social Networks. In that sense Zhou, Chen, and Yu combined an ontology-based Social Network along with a statistical learning method towards Semantic Web data using an extended FOAF (friend-of-a-friend) ontology applied as a mediation schema to integrate Social Networks and a hybrid entity reconciliation method to resolve entities of different data sources [19]. Thushar and Thilagam used Semantic Web technology for the identification of associations between multiple domains within a Social Network [20].
+Several Relational Learning methods have supported Social Network analysis predicated on the concept of homophily-based associations to support learning. In that context, we have the application of probabilistic modeling [21] collaborative relationship [22] and inference-based approaches [23].
+Visualization techniques are being used, and it substantially helps in studying Social Networks dynamics. Batajelj and Mrvar created tools for the visualization of large-scale networks where it is possible to identify vertices and relations between clusters [24].
+Noel et al. calculated inter-item distances among combinations of elements from which hierarchical clustering dendrograms are visualized to enhance measurement consistency between clusters and frequent item-sets. They introduced an application of association mining to the visualization of link structures. Important frequently occurring higher-order item-sets are often obscured by the poor pairwise treatment of traditional analysis. The approach they take here involves the discovery of frequently occurring item-sets of arbitrary cardinalities, and the assigning 
+of importance to them according to their support frequencies[25].
+Levng et al. created Social Viz which provided users with a means to view frequency relationships among multiple entities in a network [26]. They used frequent pattern mining and visualization techniques. a visualizer called SocialViz is developed for providing users with frequency information on the social relationship among multiple entities in the networks. SocialViz could be used a standalone visualization tool, or as an additional tool to existing visualizers, for social networks exploration[26].
+David Alfred et al. used a collection of twitter message to extract metrics that determine the effect of key players and find a correlation between their graph structure and the market share of three primary mobile Operating System[27].
+Sharad Goel, and Daniel Goldstein used retail data and applied logistic regression and five-fold cross-validation to compute the likelihood of an individual making a purchase based on his contacts past activities.The results show that individuals with contacts who made a purchase before are more likely to purchase than individuals with connections who did not have any previous purchase[28]. Yoon et al. used S&P companies data from 2010-2015 and math them to 24 million user comments directed at those companies' Facebook posts.They tested hypotheses using fixed effect(FE) and random effects(RE) and dynamic (generalized method of moments) and reached to the conclusion that digital engagement volume has significant positive impact on revenue[29]
+John et al. cautioned the translation of "liking" on social media into an indicator of an intent to make a purchase.Through their study they discover based on more than 14000 cases, that more features in addition to the button "Like" are needed to make the accurate prediction on the purchase[30].
+Chong et al. conducted an experimental study on the consumer engagement behavior(CEB) and were able to show using ordinary least square (OLS) regression models that Facebook and YouTube activities positively correlate with box-office revenue, however, their results are not conclusive for twitter.They proposed and tested a set of metrics[31].
+Ding et al. used Pre-released movies "likes" data from Facebook and discovered that more campaign on those Pre-released data increases revenue for a film [32]. Yung et al. propose an experimental model where businesses can target new customers; when a customer visits a store, recommendations are guided using the client social media data. The preliminary results show that companies can generate substantial revenue utilizing this process[33].
+Hyunmi et al. investigated the ewom(electronic word-of-mouth) of different social networks using Roger's innovation diffusion model on collected daily data from movies and the results pertain that Twitter influence on box office revenue is more significant in the initial opening stage[34].
+
+###Limits of the previous approaches.
+
+Most of the work elaborated above even though spread around different techniques do handle Social Network analysis in a static fashion where nodes or actors dynamics are not taken into account. The arrival or departure time of agents are not taking into consideration, but we believe those features can lead to better insights.The geospatial distribution of the contacts is somehow neglected in the studies.Very often our contacts on networks are spread around the globe and depending on the geographical position, reality and culture can create a barrier that is hard to overcome so we believe a segmented approach can be helpful. Most of the work above also are somehow single network an approach, individual may have preferred using different social networks, and we believe an approach that combines multiple networks analysis may be more conclusive. A handicap with most of those research is the limited scope of Social Networks analysis only.Most of the data available in Social Network are unstructured, a hybrid approach where also structured transaction data are used can lead to better predictions.If a new node joins a network, we can make a recommendation based on his contacts preference, but an old node which has transaction data available in retailer database could have a better 
+recommendation based on both analysis.
+
+###Methodology
+We defined a framework where nodes are individuals or users. Unlike previous studies, we consider the time factor when a node enter or exit the network. We define and track metrics that define nodes activities: number of comments or "like" and browsing time on social networks related to time.We define similarity measures as characteristics shared by different nodes, and we cluster nodes based on those similarities. We combine the use of multiple networks datasets. We describe a second set of nodes as products, and we specify characteristics that differentiate products. We study the proprieties of nodes or group of nodes as well as their edges(relationships).Unlike previous studies, we consider two situations on multiple Social Networks, a condition where consumer's past transactional data is available and a situation in the absence of transactional data.
+We propose hybrid models for purchase predictions in either situation. We measure the performance of the models proposed on the actual data.
+
+
+###References
+
+
+[1] Achrekar, H.; Gandhe, A.; Lazarus, R.; Ssu-Hsin Yu; Benyuan Liu; Predicting Flu Trends using Twitter data Computer Communications Workshops (INFOCOM WKSHPS), 2011 IEEE Conference on
+Publication Year: 2011 , Page(s): 702 - 707
+
+[2] Peng, Huan-Kai; Zhu, Jiang; Piao, Dongzhen; Yan, Rong; Zhang, Ying;
+Retweet Modeling Using Conditional Random Fields
+Data Mining Workshops (ICDMW), 2011 IEEE 11th International Conference on
+Publication Year: 2011, pp 336-343
+
+[3] Iyengar, Akshaya; Finin, Tim; Joshi, Anupam; Content-Based Prediction of Temporal Boundaries for Events in Twitter
+Privacy, Security, Risk and Trust (PASSAT), 2011 IEEE Third International Conference on and 2011 IEEE Third International Conference on Social Computing (SocialCom)
+Publication Year: 2011, pp 186-191
+
+[4] Wasserman, Faust, "Social network analysis: methods and applications" (structural analysis in the social sciences), Cambridge University Press, Cambridge.
+
+[5]  Measurement and analysis of online social networks by Alan Mislove, Massimiliano Marcon, Krishna P. Gummadi, Peter Druschel, Bobby Bhattacharjee
+In Proceedings of the 7th ACM SIGCOMM conference on Internet measurement (2007), pp. 29-42,
+
+[6] Cantonese, Salvadore, De Meo, Pasquale, Ferrara, Emilio, Fiumara, Giacomo, Provetti, Alessandro, Crawling Facebook for Social Network Analysis, WIMS'11 May 25-27, 2011 Sogndal Norway
+
+[7] Knowledge Discovery and Retrieval on World Wide Web Using Web Structure Mining
+
+Boddu, Sekhar Babu; Anne, V.P Krishna; Kurra, Rajesekhara Rao; Mishra, Durgesh Kumar; Mathematical/Analytical Modelling and Computer Simulation (AMS), 2010 Fourth Asia International Conference on, 2010, pp: 532-537
+
+
+[8] Erbs, Nicolai, Zesch, Torsten, Gurevych, Iryna, Link Discovery: A Comprehensive Analysis, 2001 Fifth IEEE International Conference on Semantic Computing 
+
+[9] Acar, E.; Dunlavy, D.M.; Kolda, T.G.;
+Link Prediction on Evolving Data Using Matrix and Tensor Factorizations
+Data Mining Workshops, 2009. ICDMW '09. IEEE International Conference on
+2009, pp 262-269
+
+[10]Cai-Rong Yan; Jun-Yi Shen; Qin-Ke Peng; Ding Pan; Parallel Web mining for link prediction in cluster server Machine Learning and Cybernetics, 2005. Proceedings of 2005 International Conference on
+Volume: 4: 2005 , Page(s): 2291 - 2295 Vol. 4
+
+[11] Caverlee, J.; Webb, S.; Ling Liu; Rouse, W.B.;
+A Parameterized Approach to Spam-Resilient Link Analysis of the Web
+Parallel and Distributed Systems, IEEE Transactions on Volume: 20, Issue: 10
+2009, pp 1422-1438
+
+[12] Rong Qian; Wei Zhang; Bingni Yang; Detect community structure from the Enron Email Corpus Based on Link Mining, Intelligent Systems Design, and Applications, 2006. ISDA '06. Sixth International Conference on
+Volume: 2Publication Year: 2006 , Page(s): 850 -855
+
+[13] Web structure mining: an introduction
+da Costa, M.G., Jr.; Zhiguo Gong;
+Information Acquisition, 2005 IEEE International Conference on 2005
+
+[14]L. Page, S. Brin, R. Motwani, T. Winograd, The PageRank citation ranking: Bringing order to the Web., Technical Report, Stanford Univesity, 1998
+
+[15]NMF: Network Mining Framework Using Topological Structure of Complex Networks
+Sugiyama, K.; Ohsaki, H.; Imase, M.; Yagi, T.; Murayama, J.;
+Congress on Services Part II, 2008. SERVICES-2. IEEE Publication Year: 2008, pp 210-211
+
+[16] J. Kleinburg, Authoritative sources in a hyperlinked environment. Journal of the ACM 46(5): 604-632 1999 
+
+[17]K. Bharat , M.R. Henzinger, Improved algorithms for topic distillation in a hyperlinked environment. In ACM SIGIR International Conference on Research and Development in Information Retrieval, pages 104-111, 1998
+
+[18]S. Chakrabarti, B.Dom, and P.Indyk Enhanced hypertext categorization using hyperlinks. In SIGMOD International Conference on Management of Data pp 307- 318, 1998
+
+[19]Semantic Message Link Based Service Set Mining for Service Composition
+Anping Zhao; Xiaoyong Wang; Ke Ren; Yuhui Qiu;
+ 
+
+Semantics, Knowledge and Grid, 2009. SKG 2009. Fifth International Conference on 2009 , Page(s): 338 - 341 
+
+[20]Thushar, A.K.; Thilagam, P.S.; An RDF Approach for Discovering the Relevant Semantic Associations in a Social Network Advanced Computing and Communications, 2008. ADCOM 2008. 16th International Conference on Publication Year: 2008, pp 214- 220
+
+[21] Achim Rettinger Matthias Nickles, Volker Tresp Statistical Relational Learning with Formal Ontologies, ECML PKDD '09 Proceedings of the European Conference on Machine Learning and Knowledge Discovery in Databases: Part II
+
+[22] Kirsten, Mathias, Wrobel, Stefan, Inductive Logic Programming, Lecture Notes in Computer Science, 1998, Volume 1446/1998, 261-270, DOI: 10.1007/BFb0027330 
+
+[23] Chunying Zhou; Huajun Chen; Tong Yu; Learning a Probabilistic Semantic Model from Heterogeneous Social Networks for Relationship Identification Tools with Artificial Intelligence, 2008. ICTAI '08. 20th IEEE International Conference on Volume: 1
+
+[24] Batagelj, Vladimir, Mrvar, Andrej, Pajek: Analysis and visualization of large networks, Graph Drawing Software Book. Junger, P. Mutzel, editors 2003
+
+[25]Noel, S.; Raghavan, V.; Chu, C.-H H.H.;
+Visualizing association mining results through hierarchical clusters, Data Mining, 2001. ICDM 2001, Proceedings IEEE International Conference on
+Publication Year: 2001, pp 425 - 432
+
+
+[26]Leung, Carson Kai-Sang, Carmichael, Christopher L., Exploring Social Networks: A Frequent-Pattern Visualization Approach, IEEE International Conference on Social Computing, 2010
+
+
+[27] David Alfred Ostrowski. "Social Network Analysis for Consumer Behavior Prediction". Accessible at: http://worldcomp-proceedings.com/proc/p2012/ICA3445.pdf
+
+[28]Sharad Goel, Daniel C. Goldstein.
+"Predicting Individual Behavior with Social Networks"
+
+
+
+[29] Attracting Comments: Digital Engagement Metrics on Facebook and Financial Performance
+Gunwoo Yoon, Cong Li, Yi (Grace) Ji, Michael North, Cheng Hong & Jiangmeng Liu
+Pages 1-14 | Received 28 Apr 2017, Accepted 07 Nov 2017, Published online: 24 Jan 2018
+https://doi.org/10.1080/00913367.2017.1405753
+
+
+
+[30]Leslie K. John, Oliver Emrich, Sunil Gupta, and Michael I. Norton (2017) Does "Liking" Lead to Loving? The Impact of Joining a Brand's Social Network on Marketing Outcomes. Journal of Marketing Research: February 2017, Vol. 54, No. 1, pp. 144-155.
+https://doi.org/10.1509/jmr.14.0237
+
+
+[31]Chong Oh, Yaman Roumani, Joseph K. Nwankpa, Han-Fen Hu
+Beyond likes and tweets: Consumer engagement behavior and movie box office in social media
+Information & Management
+Volume 54, Issue 1, January 2017, Pages 25-37
+10.1016/j.im.2016.03.004
+
+
+[32]Chao Ding,Hsing Kenneth Cheng,Yang Duan,YongJin
+The power of the "like" button: The impact of social media on box office
+Decision Support Systems
+Volume 94, February 2017, Pages 77-84
+https://doi.org/10.1016/j.dss.2016.11.002
+
+
+
+[33]Yung-Ming Li, Lien-Fa Lin, Chun-Chih Ho
+A social route recommender mechanism for store shopping support
+Author links open overlay panel
+Decision Support Systems
+Volume 94, February 2017, Pages 97-108
+
+https://doi.org/10.1016/j.dss.2016.11.004
+
+
+
+[34]Hyunmi Baek,Sehwan Oh,Hee-DongYang,JoongHo Ahn
+Electronic word-of-mouth, box office revenue and social media
+Electronic Commerce Research and Applications
+Volume 22, March-April 2017, Pages 13-23
+https://doi.org/10.1016/j.elerap.2017.02.001
+
+
+
+
+
